@@ -1,66 +1,124 @@
 #include "Interface.h"
+#include "Connection.h"
 #include "Comm_Client.h"
 #include "Recorder.h"
-#include "Connection.h"
+#include "Mistakes.h"
 #include <iostream>
 #include <boost/program_options.hpp>
 #include <string>
-#include <stdexcept>
+#include <vector>
 
 namespace po = boost::program_options;
 
-int Interface::comm_proc(int argc, const char* argv[]) {
-    std::string logFile = "server.log";
-    std::string baseFile = "database.txt";
-    int port = 33333; 
-    std::string dataType;
-    std::string hashType;
-    std::string saltSide;
-
-
+int Interface::comm_proc(int argc, const char** argv)
+{
+    bool flag_b = false;
+    bool flag_l = false;
+    bool flag_p = false;
+    int PORT;
+    std::string logfile;
+    std::string basefile;
+  
     try {
-        po::options_description desc("Allowed options");
-        desc.add_options()
-            ("help,h", "produce help message")
-            ("log-file,l", po::value<std::string>(&logFile), "Path to log file")
-            ("base-file,b", po::value<std::string>(&baseFile), "Path to database file")
-            ("type-data,T", po::value<std::string>(&dataType), "Data type: double, float, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t")
-            ("hash-type,H", po::value<std::string>(&hashType), "Hash type: MD5, SHA1, SHA224, SHA256")
-            ("salt-side,S", po::value<std::string>(&saltSide), "Salt side: server, client");
-
+        po::options_description opts("Allowed options");
+        opts.add_options()
+        ("help,h", "Show help")
+        ("basefile,b",
+         po::value<std::string>()->default_value("/home/stud/git_belik/Belikov_Kursovaya/Beliktest/database.txt"),
+         "option is string(path to file with database)") 
+        ("logfile,l",                        
+         po::value<std::string>()->default_value("/home/stud/git_belik/Belikov_Kursovaya/Beliktest/log.txt"), 
+         "option is string(path to file with logs)")
+        ("PORT,p",                               
+         po::value<int>(&PORT)->default_value(33333),
+         "option is int (PORT for server)");
 
         po::variables_map vm;
-        po::store(po::parse_command_line(argc, argv, desc), vm);
+        po::store(po::parse_command_line(argc, argv, opts), vm);
         po::notify(vm);
-
-        if (vm.count("help")) {
-            std::cout << desc << "\n";
-            return 0;
+        if(vm.count("help")) {
+            std::cout << opts << "\n";
+            exit(0);
         }
 
-        
-        if (dataType.empty() || hashType.empty() || saltSide.empty()) {
-            throw std::runtime_error("Missing required parameters");
+        if(vm.count("basefile")) {
+            if(vm["basefile"].as<std::string>() == "/home/stud/git_belik/Belikov_Kursovaya/Beliktest/database.txt") {
+                flag_b = true;
+            }
+            basefile = vm["basefile"].as<std::string>();
+        }
+        if(vm.count("logfile")) {
+            if(vm["logfile"].as<std::string>() == "/home/stud/git_belik/Belikov_Kursovaya/Beliktest/log.txt") {
+                flag_l = true;
+            }
+            logfile = vm["logfile"].as<std::string>();
         }
 
-        
-        Recorder recorder(logFile);
-        recorder.writelog("Log file path set to: " + logFile);
-        recorder.writelog("Database file path set to: " + baseFile);
-        recorder.writelog("Port set to: " + std::to_string(port));
-
-        
-        Connection connection;
-        connection.connect_to_base(baseFile);
-        recorder.writelog("Database connected successfully");
-
-
-        
-        Comm_Client client(recorder, connection, port, dataType, hashType, saltSide);
-        return client.run();
-
-    } catch (const std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-        return 1;
+        if(vm.count("PORT")) {
+            if(vm["PORT"].as<int>() == 33333) {
+                flag_p = true;
+            }
+            PORT = vm["PORT"].as<int>();
     }
+ 
+   	if(PORT < 1024 or PORT > 65535){
+   		throw crit_err("Incorrect port");
+   	}
+	if(flag_b and flag_l and flag_p) {
+        std::cout << "Сервер запущен с параметрами по умолчанию.\nИспользовать -h for help"<<std::endl;
+        }
+    Recorder l1(logfile);
+        if(logfile != "/home/stud/git_belik/Belikov_Kursovaya/Beliktest/log.txt") {
+            l1.writelog("Path to logfile set value: "+logfile);
+        } else {
+            l1.writelog("Path to logfile set default value");
+        }
+    if(basefile != "/home/stud/git_belik/Belikov_Kursovaya/Beliktest/database.txt") {
+        l1.writelog("Path to basefile set value: " + basefile);
+    } else {
+        l1.writelog("Path to basefile set default value");
+    }
+    if(PORT != 33333) {
+        l1.writelog("Port set not default value");
+    } else {
+        l1.writelog("Port set default value");
+    }
+    Connector_to_base c1;
+    c1.connect_to_base(basefile);
+    l1.writelog("Connect to database success!");
+    l1.writelog("Server started");
+    Client_Communicate con;
+    #if _UNITTEST_!=1
+    con.connection(PORT,c1.get_data(),&l1);
+	#endif
+    }catch(crit_err& e){
+    	#if _UNITTEST_ != 1
+    	std::cerr << "error: " << e.what() << "\n";
+        std::cerr << "Критическая ошибка" << std::endl;
+        #endif
+        #if _UNITTEST_ ==1
+        std::cerr << "crit_err exception" << std::endl;
+        #endif
+    }catch(po::error& e) {
+    	#if _UNITTEST_ != 1
+        std::cerr << "error: " << e.what() << "\n";
+        std::cerr << "Use -h for help\n";
+        #endif
+        #if _UNITTEST_ ==1
+        std::cerr << "Boost errors" << std::endl;
+        #endif
+    }catch(std::exception& e) {
+    	#if _UNITTEST_ != 1
+        std::cerr << "error: " << e.what() << "\n";
+        std::cerr << "Use -h for help\n";
+        #endif
+        #if _UNITTEST_ ==1
+        std::cerr << "Exception" << std::endl;
+        #endif
+    } catch(...) {
+        std::cerr << "Exception of unknown type!\n";
+        std::cerr << "Use -h for help\n";
+        std::terminate();
+    }
+    return 0;
 }

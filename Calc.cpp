@@ -1,29 +1,22 @@
 #include "Calc.h"
-#include <limits>
-#include <stdexcept>
-#include <vector>
 
-Calc::Calc(const std::vector<int32_t>& inputData) : data(inputData), result(1) { 
-    if (data.empty()) {
-        result = 0;
+Calc::Calc(std::vector<int32_t> input_data) {
+    try {
+        int32_t temp_res = 1; 
+        for (auto elem : input_data) {
+            temp_res = boost::numeric_cast<int32_t>(temp_res * elem);
+        }
+        results = temp_res;
+    } catch (boost::numeric::negative_overflow& e) {
+        results = std::numeric_limits<int32_t>::lowest();
+    } catch (boost::numeric::positive_overflow& e) {
+        results = std::numeric_limits<int32_t>::max();
     }
 }
 
-int32_t Calc::get_result() const {
-    if (data.empty()) {
-        return 0;
-    }
-    int32_t result = 1;
-    for (int32_t val : data) {
-        if (val == 0) {
-            return 0; 
-        }
+int32_t Calculator::send_res() {
+    return results;
+}
         
-        if ((result > 0 && val > std::numeric_limits<int32_t>::max() / result) ||
-            (result < 0 && val < std::numeric_limits<int32_t>::min() / result)) {
-            throw std::overflow_error("Integer overflow during multiplication");
-        }
-        result *= val;
-    }
-    return result;
-}
+
+

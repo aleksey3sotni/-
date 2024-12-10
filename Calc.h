@@ -1,13 +1,11 @@
 #pragma once
 #include <vector>
-#include <cstdint>
+#include <limits>
 #include <boost/numeric/conversion/cast.hpp>
 
 class Calc {
-private:
-    std::vector<int32_t> data;
-    int32_t result;
+    int32_t results;
 public:
-    Calc(const std::vector<int32_t>& inputData);
-    int32_t get_result() const;
+    Calc(std::vector<int32_t> input_data);
+    int32_t send_res();
 };

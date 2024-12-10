@@ -4,8 +4,8 @@
 
 class Interface
 {
-    int port_value;
+    int PORT;
 public:
-    Interface() = default;
+    Interface(){}
     int comm_proc(int argc, const char** argv);
 };
