@@ -1,0 +1,29 @@
+\hypertarget{error_8h_source}{}\doxysection{error.\+h}
+\label{error_8h_source}\index{code/error.h@{code/error.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classError}{Error}} : \textcolor{keyword}{public} runtime\_error}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \textcolor{keyword}{explicit} \mbox{\hyperlink{classError_a0a64bd5f077f9a3afe91969646698b4f}{Error}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&what\_arg, \textcolor{keywordtype}{bool} is\_critical = \textcolor{keyword}{false});}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32     \textcolor{keyword}{explicit} \mbox{\hyperlink{classError_a0a64bd5f077f9a3afe91969646698b4f}{Error}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *what\_arg, \textcolor{keywordtype}{bool} is\_critical = \textcolor{keyword}{false});}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classError_a1a27d815f0446a16516e2434a3ae4396}{isCritical}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{string} \mbox{\hyperlink{classError_a3b2c0f1cc57f51c9858a80cafb82c5f1}{getTimestamp}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{private}:}
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} critical; }
+\DoxyCodeLine{51     \textcolor{keywordtype}{string} timestamp; }
+\DoxyCodeLine{52 \};}
+
+\end{DoxyCode}

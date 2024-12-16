@@ -1,0 +1,130 @@
+\hypertarget{classCLI}{}\doxysection{Класс CLI}
+\label{classCLI}\index{CLI@{CLI}}
+
+
+Класс для обработки аргументов командной строки.  
+
+
+
+
+{\ttfamily \#include $<$cli.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCLI_a1a5b0f7ec3b242c5c56e4745adbb391e}{CLI}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCLI_a41c44d71e49582fb92fc22d21dd6f3b1}{parse\+Args}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Парсит аргументы командной строки. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCLI_a3eb17cbdc42e74803946c991c3e226aa}\label{classCLI_a3eb17cbdc42e74803946c991c3e226aa}} 
+void {\bfseries show\+Help} () const
+\begin{DoxyCompactList}\small\item\em Печатает справку по использованию программы. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCLI_ab74bbd214a53a0b58507b3d7a4d84b40}{get\+Addr}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает адрес сервера. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCLI_a2eb184c13349479a0edac5c6a2d25a69}{get\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает порт сервера. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCLI_a4e85fb70fd6c8177870f56944d4c1ebe}{get\+Log\+File}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает путь к лог-\/файлу. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCLI_a32a62813f2caef906e7bb14c60a6f5ca}{get\+Data\+File}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает путь к файлу данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для обработки аргументов командной строки. 
+
+Класс предоставляет методы для парсинга аргументов командной строки и получения значений аргументов. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCLI_a1a5b0f7ec3b242c5c56e4745adbb391e}\label{classCLI_a1a5b0f7ec3b242c5c56e4745adbb391e}} 
+\index{CLI@{CLI}!CLI@{CLI}}
+\index{CLI@{CLI}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{CLI()}{CLI()}}
+{\footnotesize\ttfamily CLI\+::\+CLI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. 
+
+Устанавливает значения аргументов командной строки по умолчанию. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCLI_ab74bbd214a53a0b58507b3d7a4d84b40}\label{classCLI_ab74bbd214a53a0b58507b3d7a4d84b40}} 
+\index{CLI@{CLI}!getAddr@{getAddr}}
+\index{getAddr@{getAddr}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{getAddr()}{getAddr()}}
+{\footnotesize\ttfamily string CLI\+::get\+Addr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает адрес сервера. 
+
+\begin{DoxyReturn}{Возвращает}
+string Адрес сервера. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCLI_a32a62813f2caef906e7bb14c60a6f5ca}\label{classCLI_a32a62813f2caef906e7bb14c60a6f5ca}} 
+\index{CLI@{CLI}!getDataFile@{getDataFile}}
+\index{getDataFile@{getDataFile}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{getDataFile()}{getDataFile()}}
+{\footnotesize\ttfamily string CLI\+::get\+Data\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает путь к файлу данных. 
+
+\begin{DoxyReturn}{Возвращает}
+string Путь к файлу данных. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCLI_a4e85fb70fd6c8177870f56944d4c1ebe}\label{classCLI_a4e85fb70fd6c8177870f56944d4c1ebe}} 
+\index{CLI@{CLI}!getLogFile@{getLogFile}}
+\index{getLogFile@{getLogFile}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{getLogFile()}{getLogFile()}}
+{\footnotesize\ttfamily string CLI\+::get\+Log\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает путь к лог-\/файлу. 
+
+\begin{DoxyReturn}{Возвращает}
+string Путь к лог-\/файлу. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCLI_a2eb184c13349479a0edac5c6a2d25a69}\label{classCLI_a2eb184c13349479a0edac5c6a2d25a69}} 
+\index{CLI@{CLI}!getPort@{getPort}}
+\index{getPort@{getPort}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily int CLI\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает порт сервера. 
+
+\begin{DoxyReturn}{Возвращает}
+int Порт сервера. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCLI_a41c44d71e49582fb92fc22d21dd6f3b1}\label{classCLI_a41c44d71e49582fb92fc22d21dd6f3b1}} 
+\index{CLI@{CLI}!parseArgs@{parseArgs}}
+\index{parseArgs@{parseArgs}!CLI@{CLI}}
+\doxysubsubsection{\texorpdfstring{parseArgs()}{parseArgs()}}
+{\footnotesize\ttfamily void CLI\+::parse\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Парсит аргументы командной строки. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argc} & Количество аргументов. \\
+\hline
+{\em argv} & Массив аргументов. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classError}{Error}}} & Если возникает ошибка парсинга. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+code/cli.\+h\item 
+code/cli.\+cpp\end{DoxyCompactItemize}

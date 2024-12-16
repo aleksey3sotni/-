@@ -1,0 +1,28 @@
+\hypertarget{logger_8h_source}{}\doxysection{logger.\+h}
+\label{logger_8h_source}\index{code/logger.h@{code/logger.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}error.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classLogger}{Logger}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{explicit} \mbox{\hyperlink{classLogger_aad9350f6ed02b47a13a571763a2f85ae}{Logger}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&logFilePath);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classLogger_a2ffa0c832affba79199f53ba7a6931ee}{write}}(\textcolor{keyword}{const} \mbox{\hyperlink{classError}{Error}} \&exception);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{string} \mbox{\hyperlink{classLogger_a64ca92c37d7c77defb46bfb865b0d2f3}{getLogFilePath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     \textcolor{keywordtype}{string} logFilePath; }
+\DoxyCodeLine{44     ofstream logFile; }
+\DoxyCodeLine{45 \};}
+
+\end{DoxyCode}

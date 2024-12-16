@@ -1,0 +1,109 @@
+\hypertarget{classError}{}\doxysection{Класс Error}
+\label{classError}\index{Error@{Error}}
+
+
+Класс для представления ошибок в приложении.  
+
+
+
+
+{\ttfamily \#include $<$error.\+h$>$}
+
+
+
+Граф наследования\+:Error\+:
+% FIG 0
+
+
+Граф связей класса Error\+:
+% FIG 1
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classError_a0a64bd5f077f9a3afe91969646698b4f}{Error}} (const string \&what\+\_\+arg, bool is\+\_\+critical=false)
+\begin{DoxyCompactList}\small\item\em Конструктор с сообщением об ошибке и флагом критичности. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classError_ad6a24bc6450a8a13b40e8a8c73f6c523}{Error}} (const char $\ast$what\+\_\+arg, bool is\+\_\+critical=false)
+\begin{DoxyCompactList}\small\item\em Конструктор с сообщением об ошибке и флагом критичности. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classError_a1a27d815f0446a16516e2434a3ae4396}{is\+Critical}} () const
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли ошибка критической. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classError_a3b2c0f1cc57f51c9858a80cafb82c5f1}{get\+Timestamp}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает временную метку ошибки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для представления ошибок в приложении. 
+
+Класс наследует runtime\+\_\+error и добавляет флаг критичности и временную метку. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classError_a0a64bd5f077f9a3afe91969646698b4f}\label{classError_a0a64bd5f077f9a3afe91969646698b4f}} 
+\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Error\+::\+Error (\begin{DoxyParamCaption}\item[{const string \&}]{what\+\_\+arg,  }\item[{bool}]{is\+\_\+critical = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор с сообщением об ошибке и флагом критичности. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em what\+\_\+arg} & Сообщение об ошибке. \\
+\hline
+{\em is\+\_\+critical} & Флаг критичности ошибки. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classError_ad6a24bc6450a8a13b40e8a8c73f6c523}\label{classError_ad6a24bc6450a8a13b40e8a8c73f6c523}} 
+\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Error\+::\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{what\+\_\+arg,  }\item[{bool}]{is\+\_\+critical = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор с сообщением об ошибке и флагом критичности. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em what\+\_\+arg} & Сообщение об ошибке. \\
+\hline
+{\em is\+\_\+critical} & Флаг критичности ошибки. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classError_a3b2c0f1cc57f51c9858a80cafb82c5f1}\label{classError_a3b2c0f1cc57f51c9858a80cafb82c5f1}} 
+\index{Error@{Error}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily string Error\+::get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает временную метку ошибки. 
+
+\begin{DoxyReturn}{Возвращает}
+string Временная метка ошибки. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classError_a1a27d815f0446a16516e2434a3ae4396}\label{classError_a1a27d815f0446a16516e2434a3ae4396}} 
+\index{Error@{Error}!isCritical@{isCritical}}
+\index{isCritical@{isCritical}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{isCritical()}{isCritical()}}
+{\footnotesize\ttfamily bool Error\+::is\+Critical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Проверяет, является ли ошибка критической. 
+
+\begin{DoxyReturn}{Возвращает}
+true Если ошибка критическая. 
+
+false Если ошибка не критическая. 
+\end{DoxyReturn}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+code/error.\+h\item 
+code/error.\+cpp\end{DoxyCompactItemize}

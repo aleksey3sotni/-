@@ -1,0 +1,23 @@
+[2024-12-16 21:32:03] CRITICAL: Failed to open file: data.txt
+[2024-12-16 21:37:42] CRITICAL: Failed to open file: data.txt
+[2024-12-16 21:44:05] ERROR: InvalidLoginOrPasswordError
+[2024-12-16 21:45:06] CRITICAL: BindSocketError
+[2024-12-16 21:45:09] CRITICAL: BindSocketError
+[2024-12-16 21:45:10] CRITICAL: BindSocketError
+[2024-12-16 21:45:11] CRITICAL: BindSocketError
+[2024-12-16 21:45:43] CRITICAL: BindSocketError
+[2024-12-16 21:45:44] CRITICAL: BindSocketError
+[2024-12-16 21:45:45] CRITICAL: BindSocketError
+[2024-12-16 21:45:46] CRITICAL: BindSocketError
+[2024-12-16 21:45:46] CRITICAL: BindSocketError
+[2024-12-16 21:45:47] CRITICAL: BindSocketError
+[2024-12-16 21:45:47] CRITICAL: BindSocketError
+[2024-12-16 21:45:47] CRITICAL: BindSocketError
+[2024-12-16 21:45:48] CRITICAL: BindSocketError
+[2024-12-16 21:45:48] CRITICAL: BindSocketError
+[2024-12-16 21:45:49] CRITICAL: BindSocketError
+[2024-12-16 21:45:49] CRITICAL: BindSocketError
+[2024-12-16 21:45:50] CRITICAL: BindSocketError
+[2024-12-16 21:45:50] CRITICAL: BindSocketError
+[2024-12-16 21:45:50] CRITICAL: BindSocketError
+[2024-12-16 21:48:57] CRITICAL: BindSocketError

@@ -1,0 +1,47 @@
+\hypertarget{server_8h_source}{}\doxysection{server.\+h}
+\label{server_8h_source}\index{code/server.h@{code/server.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}error.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}md5.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classServer}{Server}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{classServer_ad1c9eb1dc06242e037613a514d29a29e}{Server}}(\textcolor{keyword}{const} std::string \&addr, \textcolor{keywordtype}{int} port, \textcolor{keyword}{const} std::vector<std::pair<std::string, std::string>> \&data);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_aec2f9e888a2a4bc0a20e43038d1cd128}{initializeServer}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a3f28d47da84a2d2af9e9b1e9f6c34be2}{terminateServer}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54     std::string \&\mbox{\hyperlink{classServer_a93e8f14dad904f7c3786a2b4f74e2105}{getAddr}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} \&\mbox{\hyperlink{classServer_a649a05546957d9ee212ff47835c81248}{getPort}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68     std::vector<std::pair<std::string, std::string>> \&\mbox{\hyperlink{classServer_a44c2002f6a25346c5009ca77a056f75c}{getData}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_abfe2eafe8666592686a017e8b6f1221d}{waitForClientConnection}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_ac0a792fd61dfb1dcfb2fc6392e9b9fad}{authenticateClient}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{classServer_a1d812212f662293c5cd9f5523f40839e}{calculateAndSendProduct}}();}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{private}:}
+\DoxyCodeLine{93     std::string addr; }
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} port; }
+\DoxyCodeLine{95     std::vector<std::pair<std::string, std::string>> data; }
+\DoxyCodeLine{96     \textcolor{keywordtype}{int} socket; }
+\DoxyCodeLine{97     \textcolor{keywordtype}{int} client; }
+\DoxyCodeLine{98 \};}
+
+\end{DoxyCode}

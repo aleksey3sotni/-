@@ -1,0 +1,101 @@
+\begin{theindex}
+
+  \item {authenticateClient}
+    \subitem {Server}, \hyperpage{14}
+
+  \indexspace
+
+  \item {calculateAndSendProduct}
+    \subitem {Server}, \hyperpage{14}
+  \item {CLI}, \hyperpage{7}
+    \subitem {CLI}, \hyperpage{7}
+    \subitem {getAddr}, \hyperpage{8}
+    \subitem {getDataFile}, \hyperpage{8}
+    \subitem {getLogFile}, \hyperpage{8}
+    \subitem {getPort}, \hyperpage{8}
+    \subitem {parseArgs}, \hyperpage{9}
+  \item {code/cli.h}, \hyperpage{17}
+  \item {code/dataworker.h}, \hyperpage{17}
+  \item {code/error.h}, \hyperpage{18}
+  \item {code/logger.h}, \hyperpage{18}
+  \item {code/md5.h}, \hyperpage{18}
+  \item {code/server.h}, \hyperpage{18}
+
+  \indexspace
+
+  \item {DataWorker}, \hyperpage{9}
+    \subitem {DataWorker}, \hyperpage{10}
+    \subitem {getFilePath}, \hyperpage{10}
+    \subitem {readCredentials}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Error}, \hyperpage{11}
+
+  \indexspace
+
+  \item {getAddr}
+    \subitem {CLI}, \hyperpage{8}
+    \subitem {Server}, \hyperpage{14}
+  \item {getData}
+    \subitem {Server}, \hyperpage{14}
+  \item {getDataFile}
+    \subitem {CLI}, \hyperpage{8}
+  \item {getFilePath}
+    \subitem {DataWorker}, \hyperpage{10}
+  \item {getLogFile}
+    \subitem {CLI}, \hyperpage{8}
+  \item {getLogFilePath}
+    \subitem {Logger}, \hyperpage{12}
+  \item {getPort}
+    \subitem {CLI}, \hyperpage{8}
+    \subitem {Server}, \hyperpage{15}
+
+  \indexspace
+
+  \item {initializeServer}
+    \subitem {Server}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Logger}, \hyperpage{11}
+    \subitem {getLogFilePath}, \hyperpage{12}
+    \subitem {Logger}, \hyperpage{11}
+    \subitem {write}, \hyperpage{12}
+
+  \indexspace
+
+  \item {parseArgs}
+    \subitem {CLI}, \hyperpage{9}
+
+  \indexspace
+
+  \item {readCredentials}
+    \subitem {DataWorker}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Server}, \hyperpage{13}
+    \subitem {authenticateClient}, \hyperpage{14}
+    \subitem {calculateAndSendProduct}, \hyperpage{14}
+    \subitem {getAddr}, \hyperpage{14}
+    \subitem {getData}, \hyperpage{14}
+    \subitem {getPort}, \hyperpage{15}
+    \subitem {initializeServer}, \hyperpage{15}
+    \subitem {Server}, \hyperpage{13}
+    \subitem {terminateServer}, \hyperpage{15}
+    \subitem {waitForClientConnection}, \hyperpage{16}
+
+  \indexspace
+
+  \item {terminateServer}
+    \subitem {Server}, \hyperpage{15}
+
+  \indexspace
+
+  \item {waitForClientConnection}
+    \subitem {Server}, \hyperpage{16}
+  \item {write}
+    \subitem {Logger}, \hyperpage{12}
+
+\end{theindex}

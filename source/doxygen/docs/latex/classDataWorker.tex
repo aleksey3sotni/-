@@ -1,0 +1,83 @@
+\hypertarget{classDataWorker}{}\doxysection{Класс Data\+Worker}
+\label{classDataWorker}\index{DataWorker@{DataWorker}}
+
+
+Класс для работы с данными из файла.  
+
+
+
+
+{\ttfamily \#include $<$dataworker.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataWorker_a3823879ac5e43d07def1afc892237c91}{Data\+Worker}} (const string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classDataWorker}{Data\+Worker}}. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{classDataWorker_a99e5a0644847d55cede181a05963316c}{read\+Credentials}} () const
+\begin{DoxyCompactList}\small\item\em Читает учетные данные из файла. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classDataWorker_a2115b34703b4bbbef740ca369dd8f7a0}{get\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает путь к файлу данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для работы с данными из файла. 
+
+Класс предоставляет методы для чтения учетных данных из файла. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classDataWorker_a3823879ac5e43d07def1afc892237c91}\label{classDataWorker_a3823879ac5e43d07def1afc892237c91}} 
+\index{DataWorker@{DataWorker}!DataWorker@{DataWorker}}
+\index{DataWorker@{DataWorker}!DataWorker@{DataWorker}}
+\doxysubsubsection{\texorpdfstring{DataWorker()}{DataWorker()}}
+{\footnotesize\ttfamily Data\+Worker\+::\+Data\+Worker (\begin{DoxyParamCaption}\item[{const string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \mbox{\hyperlink{classDataWorker}{Data\+Worker}}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Path} & Путь к файлу данных. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classDataWorker_a2115b34703b4bbbef740ca369dd8f7a0}\label{classDataWorker_a2115b34703b4bbbef740ca369dd8f7a0}} 
+\index{DataWorker@{DataWorker}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!DataWorker@{DataWorker}}
+\doxysubsubsection{\texorpdfstring{getFilePath()}{getFilePath()}}
+{\footnotesize\ttfamily string Data\+Worker\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает путь к файлу данных. 
+
+\begin{DoxyReturn}{Возвращает}
+string Путь к файлу данных. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataWorker_a99e5a0644847d55cede181a05963316c}\label{classDataWorker_a99e5a0644847d55cede181a05963316c}} 
+\index{DataWorker@{DataWorker}!readCredentials@{readCredentials}}
+\index{readCredentials@{readCredentials}!DataWorker@{DataWorker}}
+\doxysubsubsection{\texorpdfstring{readCredentials()}{readCredentials()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, string $>$ $>$ Data\+Worker\+::read\+Credentials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Читает учетные данные из файла. 
+
+\begin{DoxyReturn}{Возвращает}
+vector$<$pair$<$string, string$>$$>$ Вектор пар логин/пароль. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classError}{Error}}} & Если не удается открыть файл или данные имеют неправильный формат. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+code/dataworker.\+h\item 
+code/dataworker.\+cpp\end{DoxyCompactItemize}

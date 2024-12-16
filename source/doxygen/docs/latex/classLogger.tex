@@ -1,0 +1,90 @@
+\hypertarget{classLogger}{}\doxysection{Класс Logger}
+\label{classLogger}\index{Logger@{Logger}}
+
+
+Класс для записи сообщений об ошибках в лог-\/файл.  
+
+
+
+
+{\ttfamily \#include $<$logger.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogger_aad9350f6ed02b47a13a571763a2f85ae}{Logger}} (const string \&log\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classLogger}{Logger}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogger_a2ffa0c832affba79199f53ba7a6931ee}{write}} (const \mbox{\hyperlink{classError}{Error}} \&exception)
+\begin{DoxyCompactList}\small\item\em Записывает сообщение об ошибке в лог-\/файл. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classLogger_a64ca92c37d7c77defb46bfb865b0d2f3}{get\+Log\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает путь к лог-\/файлу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для записи сообщений об ошибках в лог-\/файл. 
+
+Класс предоставляет методы для записи сообщений об ошибках в лог-\/файл. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classLogger_aad9350f6ed02b47a13a571763a2f85ae}\label{classLogger_aad9350f6ed02b47a13a571763a2f85ae}} 
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{const string \&}]{log\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \mbox{\hyperlink{classLogger}{Logger}}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em log\+File\+Path} & Путь к лог-\/файлу. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em runtime\+\_\+error} & Если не удается открыть лог-\/файл. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classLogger_a64ca92c37d7c77defb46bfb865b0d2f3}\label{classLogger_a64ca92c37d7c77defb46bfb865b0d2f3}} 
+\index{Logger@{Logger}!getLogFilePath@{getLogFilePath}}
+\index{getLogFilePath@{getLogFilePath}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{getLogFilePath()}{getLogFilePath()}}
+{\footnotesize\ttfamily string Logger\+::get\+Log\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Возвращает путь к лог-\/файлу. 
+
+\begin{DoxyReturn}{Возвращает}
+string Путь к лог-\/файлу. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogger_a2ffa0c832affba79199f53ba7a6931ee}\label{classLogger_a2ffa0c832affba79199f53ba7a6931ee}} 
+\index{Logger@{Logger}!write@{write}}
+\index{write@{write}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Logger\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classError}{Error}} \&}]{exception }\end{DoxyParamCaption})}
+
+
+
+Записывает сообщение об ошибке в лог-\/файл. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em exception} & Объект ошибки для записи. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em runtime\+\_\+error} & Если лог-\/файл не открыт. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+code/logger.\+h\item 
+code/logger.\+cpp\end{DoxyCompactItemize}
