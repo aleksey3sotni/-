@@ -17,4 +17,4 @@ using namespace CryptoPP::Weak1;
  * @param data Входная строка для хеширования.
  * @return std::string MD5 хеш входной строки.
  */
-std::string MD5(const std::string &data);
+std::string md5(const std::string &data);

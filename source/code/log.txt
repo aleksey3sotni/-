@@ -21,3 +21,4 @@
 [2024-12-16 21:45:50] CRITICAL: BindSocketError
 [2024-12-16 21:45:50] CRITICAL: BindSocketError
 [2024-12-16 21:48:57] CRITICAL: BindSocketError
+[2024-12-21 11:18:12] CRITICAL: BindSocketError
